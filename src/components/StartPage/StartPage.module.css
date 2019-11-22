@@ -1,0 +1,45 @@
+.welcomeBlock{
+    background: linear-gradient( rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ), url('../../img/home-background.png'); 
+    /* height: 100vh;
+    width: 100vw; */
+    height: 530px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 200px;
+}
+
+.welcome{
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+.welcomeText{
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    padding: 10px 0 40px;
+}
+
+.welcomeBtn{
+    width: 180px;
+    height: 50px;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin: auto;
+    cursor: pointer;
+}
+.welcomeBtn:hover{
+    background-color: white;
+    color: #c0301c;
+}

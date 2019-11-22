@@ -1,0 +1,59 @@
+.item{
+    position: relative;
+}
+.itemText{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    filter: blur(100px);
+}
+.itemText:hover{
+    filter: blur(0);
+}
+.item:hover .itemText{
+    filter: blur(0);
+    background-color:  rgba(192, 48, 28, 0.7);
+}
+.itemInner{
+    text-align: center;
+    padding-top: 30%;
+}
+.itemTitle{
+    font-family: 'Montserrat', serif;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+}
+.itemMessage{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 10px 0px;
+}
+.itemButton{  
+    position: relative;
+    text-transform: uppercase;
+    opacity: 1;
+    background-color: white;
+    color: #c0301c;
+    border: none;
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    text-align: left;
+    padding-left: 20px;
+    cursor: pointer;
+}
+.itemButton::after{
+    font-family: 'icomoon'; 
+    content: "\f105";
+    position: absolute;
+    top: 10px;
+    left: 70px;
+}
+.itemButton:hover{
+    color: black;
+}

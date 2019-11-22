@@ -1,0 +1,95 @@
+.pageTitle{
+    composes: pageTitle from "../Articles/Articles.module.css";
+}
+.servicesBlock{
+    composes: articlesBlock from "../Articles/Articles.module.css";
+    padding-bottom: 90px;
+}
+
+.services{
+    display: flex;
+    margin-top: 40px;
+}
+.services div+div{
+    margin-left: 20px;
+}
+
+.cardTitle{
+    text-align: center;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', serif;
+    font-size: 14px;
+    color: #555555;
+    font-weight: 600;
+}
+.cardText{
+    text-align: justify;
+    font-family: 'Roboto Slab', serif;
+    color: #555555;
+    font-size: 14px;
+}
+
+.serviceCard{
+    font-family: 'icomoon';
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    font-size: 400%;
+    margin: auto;
+    border: 2px solid #dddddd;
+    color: #c0301c;
+    position: relative;
+    margin-bottom: 10px;
+}
+.serviceCard::before{
+    position: absolute;
+    left: 19px;
+    top: 16px;
+}
+.serviceCard:hover{
+    background-color: #c0301c;
+}
+.serviceCard:hover::before{
+    color: #ffffff;
+}
+.typography, .code, .support{
+    composes: serviceCard;
+}
+.typography::before{
+    content: "\f031";
+}
+.code::before{
+    content: "\f121";
+}
+.support::before{
+    content: "\f1cd";
+}
+
+.innerContact{
+    text-align: center;
+    padding-top: 90px;
+}
+.contactBlock{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient( rgba(192, 48, 28, 0.7), rgba(192, 48, 28, 0.7) ), url('../../img/action.png');
+    height: 290px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.actionText{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: white;
+    margin-bottom: 40px;
+}
+.contactBtn{
+    composes: welcomeBtn from "../StartPage/StartPage.module.css";
+    font-family: 'Roboto Slab', serif;
+}

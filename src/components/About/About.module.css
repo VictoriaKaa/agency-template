@@ -1,0 +1,91 @@
+.pageTitle{
+    composes: pageTitle from "../Articles/Articles.module.css";
+}
+.aboutBlock{
+    composes: articlesBlock from "../Articles/Articles.module.css";
+}
+
+.aboutText{
+    display: flex;
+    font-family: 'Roboto Slab', serif;
+    font-size: 14px;
+    color: #555555;
+    margin: 30px 0;
+	line-height: 150%;
+    text-align: justify;
+}
+.aboutText div + div{
+    margin-left: 30px;
+}
+
+.card{
+    position: relative;
+    text-align: center;
+}
+.photo{
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+}
+.about__contact{
+    position: absolute;
+    left: 107px;
+    top: 80px;
+}
+.facebook, .twitter, .google, .linkedin{
+    filter: blur(100px);
+}
+.card:hover .facebook, .card:hover .twitter,.card:hover .google,.card:hover .linkedin{
+    filter: blur(0px);
+}
+.facebook, .twitter, .google, .linkedin{
+    position: relative;
+    display: inline-block;
+    margin-top: 65px;
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
+    background-color: transparent;    
+}
+.facebook:hover, .twitter:hover, .google:hover, .linkedin:hover:hover{
+    background-color: #c0301c; 
+    cursor: pointer;
+}
+.facebook::before,
+.twitter::before,
+.google::before,
+.linkedin::before{
+    position: absolute;
+    font-family: 'icomoon';
+    content: "";
+    top: 5px;
+    left: 8px;
+    color: white;
+}
+.facebook::before{
+    content: "\f09a";
+}
+.twitter::before{
+    left: 7px;
+    content: "\f099";
+}
+.google::before{
+    left: 3px;
+    content: "\f0d5";
+}
+.linkedin::before{
+    content: "\f0e1";
+}
+.name{
+    margin: 10px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', serif;
+    font-size: 14px;
+    color: #555555;
+    font-weight: 600;
+}
+.position{
+    font-family: 'Roboto Slab', serif;
+    font-size: 14px;
+    color: #555555;
+}

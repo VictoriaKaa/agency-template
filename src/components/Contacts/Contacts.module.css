@@ -1,0 +1,109 @@
+.pageTitle{
+    composes: pageTitle from "../Articles/Articles.module.css";
+}
+.pageText{
+    font-family: 'Roboto Slab', serif;
+    color: #555555;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 0 30px;
+
+}
+.contactsBlock{
+    composes: articlesBlock from "../Articles/Articles.module.css";
+}
+.innerBlock{
+    display: flex;
+    margin-top: 20px;
+}
+
+.authorContact{
+    width: 35%;
+    height: 500px;
+    margin-left: 20px;
+}
+form{
+    width: 100%;
+}
+
+.contactInner{
+    display: flex;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.formControl{
+    width: 310px;
+    height: 20px;
+    padding: 10px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 12px;
+    border-color: black;
+    margin-right: 25px;
+    resize: none;
+}
+
+.formControl:focus{
+    border-color: #c0301c;
+}
+.textField{
+    font-family: 'Roboto Slab', serif;
+    width: 90%;
+    height: 105px;
+    padding: 10px;
+    border-color: black;
+    resize: none;
+}
+.add__btn{
+    composes: add__btn from "../Articles/Articles.module.css";
+}
+
+.textReply{
+    padding-top: 7px;
+    padding-left: 30px;
+}
+.text, .star{
+    font-family: 'Roboto Slab', serif;
+    font-size: 12px;
+    color: #555555;
+}
+.star{
+    color: #c0301c;
+}
+
+.address__title, .hotline__title, .email__title{
+    text-transform: uppercase;
+    font-family: 'Montserrat', serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #555555;
+    margin-bottom: 5px;
+    position: relative;
+}
+.address__title:before,
+.hotline__title:before,
+.email__title:before{
+    font-family: 'icomoon';
+    content: "\f041";
+    position: absolute;
+    color: #555555;
+    font-size: 18px;
+    left: -22px;
+    top: -3px;
+}
+.hotline__title:before{
+    content: "\f10b";
+    font-size: 24px;
+    top: -7px;
+}
+.email__title:before{
+    content: "\f003";
+    font-size: 16px;
+    left: -24px;
+}
+.hotline__text, .address__text, .email__text{
+    font-family: 'Roboto Slab', serif;
+    font-size: 12px;
+    color: #555555;
+    margin-bottom: 55px;
+}

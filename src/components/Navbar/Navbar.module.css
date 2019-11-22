@@ -1,0 +1,17 @@
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    background-color: #5b1711;
+    padding: 20px 100px;
+    max-width: 100%;
+}
+.item a{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    text-decoration: none;
+}
+.item a.active{
+    color: gold;
+}

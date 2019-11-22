@@ -1,0 +1,41 @@
+.slider{
+    position: relative;
+    margin-top: 70px;
+}
+.slickArrow {
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    background-color: #c0301c;
+    color: white;
+    font-size: 30px;
+    z-index: 2;
+}
+
+.slickArrow:hover {
+    background: #777777;
+    cursor: pointer;
+}
+.slickArrow:after {
+    font-family: 'icomoon';
+    position: absolute;
+    top: 5%;
+    left: 34%;
+}
+.slickArrowNext{
+    composes: slickArrow;
+    left: calc(100% - 34px);
+    top: 40%;
+}
+.slickArrowNext::after{
+    content: "\f105";
+}
+.slickArrowPrev{
+    composes: slickArrow; 
+    left: 0;
+    top: 40%;
+}
+.slickArrowPrev::after{
+    content: "\f104";
+}
