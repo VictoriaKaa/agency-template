@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, BrowserRouter } from "react-router-dom";
+import { Route, HashRouter } from "react-router-dom";
 import store from './components/redux/store';
 import { Provider } from "react-redux";
 import Navbar from './components/Navbar/Navbar';
@@ -17,7 +17,7 @@ const App = (props) => {
   
   return (
     <Provider store={store}>
-      <BrowserRouter>
+      <HashRouter>  {/* hashrouter используется для github pages */}
         <div className='app-wrapper'>
           <Navbar />
           <div className='app-wrapper-content'>
@@ -30,7 +30,7 @@ const App = (props) => {
             <Route path='/contacts' render={() => <ContactsContainer />} />
           </div>
         </div>
-      </BrowserRouter>
+      </HashRouter>
 
     </Provider>);
 }
