@@ -12,7 +12,7 @@ let maxLength30 = maxLengthCreator(30);
 class Articles extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { file: '', imagePreviewUrl: '' };
+        this.state = { file: '', imagePreviewUrl: '', disabled: true };
     }
 
     addArticle = (values) => {
@@ -21,27 +21,37 @@ class Articles extends React.Component {
         let month = date.toLocaleString('default', { month: 'short' });
         this.props.addArticle(values.newArticle, values.newTitle, this.state.imagePreviewUrl, day, month);
     };
-    reset = () => {
-        console.log("clear");
-        this.setState({ file: '', imagePreviewUrl: '' });
-        this.props.resetForm();
-    }
+    // reset = () => {
+    //     console.log("clear");
+    //     this.setState({ file: '', imagePreviewUrl: '' });
+    //     this.props.resetForm();
+    // }
 
     _handleImageChange(e) {
         e.preventDefault();
+        debugger;
         let reader = new FileReader();
         let file = e.target.files[0];
         reader.onloadend = () => {
             this.setState({
                 file: file,
-                imagePreviewUrl: reader.result
+                imagePreviewUrl: reader.result,
+                disabled: false
             });
         }
         reader.readAsDataURL(file)
     }
+    deleteFile(e) {
+        e.preventDefault();
+        debugger;
+        this.setState({
+            file: '',
+            imagePreviewUrl: '',
+            disabled: true
+        });
+    }
 
     render() {
-        debugger;
         let articlesElements = this.props.articleData.map(p =>
             <Article title={p.title} text={p.text} image={p.image} day={p.day} month={p.month} />);
         let { imagePreviewUrl } = this.state;
@@ -65,16 +75,19 @@ class Articles extends React.Component {
                     </Fade>
                 </div>
                 <div className={styles.previewComponent}>
-                    <form onSubmit={(e) => this._handleSubmit(e)} className={styles.fileBlock}>
-                        <input className={styles.fileInput} type="file" id="fileForArticle"
-                            onChange={(e) => this._handleImageChange(e)} />
-                        <label for="fileForArticle">Upload file</label>
-                    </form>
+                    <div className={styles.fileLoader}>
+                        <form onSubmit={(e) => this._handleSubmit(e)} className={styles.fileBlock}>
+                            <input className={styles.fileInput} type="file" id="fileForArticle"
+                                onChange={(e) => this._handleImageChange(e)} />
+                            <label for="fileForArticle">Upload file</label>
+                        </form>
+                        <button onClick={(e) => this.deleteFile(e)} className={styles.btnClearFile} disabled={this.state.disabled} >Clear file</button>
+                    </div>
                     <div className={styles.imgPreview}>
                         {imagePreview}
                     </div>
                 </div>
-                <AddArticleFormRedux onSubmit={this.addArticle}  />
+                <AddArticleFormRedux onSubmit={this.addArticle} />
             </div>
         )
     }
@@ -82,7 +95,6 @@ class Articles extends React.Component {
 
 
 const AddArticleForm = (props) => {
-    debugger;
     const { handleSubmit, reset, pristine, submitting } = props
     return (
         <form onSubmit={props.handleSubmit}>
@@ -97,7 +109,7 @@ const AddArticleForm = (props) => {
                 </div>
                 <div>
                     <button className={styles.add__btn} >Add post</button>
-                    <button className={styles.add__btn} disabled={pristine || submitting} onClick={props.reset} >Clear</button>
+                    <button className={styles.add__btn} disabled={pristine || submitting} onClick={props.reset} >Clear text</button>
                 </div>
             </div>
         </form>
@@ -106,8 +118,9 @@ const AddArticleForm = (props) => {
 // const afterSubmit = (result, dispatch) =>
 // dispatch(reset("addArticleForm"));
 
-const AddArticleFormRedux = reduxForm({ form: "addArticleForm",
-// onSubmitSuccess: afterSubmit
+const AddArticleFormRedux = reduxForm({
+    form: "addArticleForm",
+    // onSubmitSuccess: afterSubmit
 })(AddArticleForm);
 
 

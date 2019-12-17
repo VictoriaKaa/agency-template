@@ -11,14 +11,14 @@ let initialState = {
             id: 1,
             title: "STARTUP IDEAS NEEDS TO BE FUNDED",
             text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod teduntlabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et erebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit am Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidulabore et dolore aliquyam erat, sed diam",
-            image: window.location.origin + "/img/post1.png",
+            image: process.env.PUBLIC_URL + "/img/post1-compressor.png",
             day: "12",
             month: "ОКТ."
         },
         {  id: 2,
             title: "USER INTERFACE DESIGNING ELEMENTS",
             text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod teduntlabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et erebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit am Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidulabore et dolore aliquyam erat, sed diam",
-            image: window.location.origin + "/img/post2.png",
+            image: process.env.PUBLIC_URL + "/img/post2-compressor.png",
             day: "17",
             month: "ОКТ."
         }],

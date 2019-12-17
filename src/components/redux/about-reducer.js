@@ -13,25 +13,25 @@ let initialState = {
                 id: 1,
                 name: "MD. KHALIL UDDIN",
                 position: "Head of Ideas",
-                image: window.location.origin + "/img/man1.png"
+                image:  process.env.PUBLIC_URL + "/img/man1-compressor.png"
             },
             {
                 id: 2,
                 name: "RUBEL MIAH",
                 position: "Lead WordPress Developer",
-                image: window.location.origin + "/img/man2.png"
+                image:  process.env.PUBLIC_URL + "/img/man2-compressor.png"
             },
             {
                 id: 3,
                 name: "SHAMIM MIA",
                 position: "Sr. Web Developer",
-                image: window.location.origin + "/img/man3.png"
+                image:  process.env.PUBLIC_URL + "/img/man3-compressor.png"
             },
             {
                 id: 4,
                 name: "JOHN DOE",
                 position: "Front-End Developer",
-                image: window.location.origin + "/img/man4.png"
+                image:  process.env.PUBLIC_URL + "/img/man4-compressor.png"
             },
         ]
 }

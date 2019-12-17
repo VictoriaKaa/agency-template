@@ -1,9 +1,6 @@
-.nav{
-    display: flex;
-    justify-content: flex-end;
-    background-color: #5b1711;
-    padding: 20px 100px;
-    max-width: 100%;
+
+.item{
+    margin: 10px;
 }
 .item a{
     font-family: 'Montserrat', sans-serif;
@@ -14,4 +11,15 @@
 }
 .item a.active{
     color: gold;
+}
+
+@media(max-width: 600px){
+    .item a{
+        font-size: 14px;
+    }
+}
+@media(max-width: 320px){
+    .item a{
+        font-size: 10px;
+    }
 }

@@ -2,55 +2,55 @@
 let initialState = {
         galleryData: [{
             id: 1,
-            src: window.location.origin + "/img/work1.png",
+            src: process.env.PUBLIC_URL + "/img/work1-compressor.png",
             title: "Hair Dresser",
             message: "Branding"
         },
         {
             id: 2,
-            src: window.location.origin + "/img/work2.png",
+            src: process.env.PUBLIC_URL + "/img/work2-compressor.png",
             title: "Hair Dresser",
             message: "Branding"
         },
         {
             id: 3,
-            src: window.location.origin + "/img/work3.png",
+            src: process.env.PUBLIC_URL + "/img/work3-compressor.png",
             title: "Hair Dresser",
             message: "Branding"
         },
         {
             id: 4,
-            src: window.location.origin + "/img/work4.png",
+            src: process.env.PUBLIC_URL + "/img/work4-compressor.png",
             title: "Hair Dresser",
             message: "Branding"
         },
         {
             id: 5,
-            src: window.location.origin + "/img/work5.png",
+            src: process.env.PUBLIC_URL + "/img/work5-compressor.png",
             title: "Hair Dresser",
             message: "Branding"
         },
         {
             id: 6,
-            src: window.location.origin + "/img/work6.png",
+            src: process.env.PUBLIC_URL + "/img/work6-compressor.png",
             title: "Hair Dresser",
             message: "Branding"
         },
         {
             id: 7,
-            src: window.location.origin + "/img/work7.png",
+            src: process.env.PUBLIC_URL + "/img/work7-compressor.png",
             title: "Hair Dresser",
             message: "Branding"
         },
         {
             id: 8,
-            src: window.location.origin + "/img/work8.png",
+            src: process.env.PUBLIC_URL + "/img/work8-compressor.png",
             title: "Hair Dresser",
             message: "Branding"
         },
         {
             id: 9,
-            src: window.location.origin + "/img/work9.png",
+            src: process.env.PUBLIC_URL + "/img/work9-compressor.png",
             title: "Hair Dresser",
             message: "Branding"
         }

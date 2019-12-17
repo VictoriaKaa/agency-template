@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Article.module.css';
-import post1 from '../../../img/post1.png';
+import post1 from '../../../img/post1-compressor.png';
 
 const Article = (props) => {
     let image = null;

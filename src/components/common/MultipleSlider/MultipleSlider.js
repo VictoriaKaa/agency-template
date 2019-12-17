@@ -31,7 +31,23 @@ class MultipleSlider extends React.Component {
             slidesToShow: 3,
             slidesToScroll: 3,
             nextArrow: <SampleNextArrow />,
-            prevArrow: <SamplePrevArrow />
+            prevArrow: <SamplePrevArrow />,
+            responsive: [
+                {
+                  breakpoint: 850,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                  }
+                },
+                {
+                  breakpoint: 580,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  }
+                }
+              ]
         };
         return (
             <div className={styles.slider}>

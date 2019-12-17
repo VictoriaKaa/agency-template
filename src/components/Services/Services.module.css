@@ -10,8 +10,8 @@
     display: flex;
     margin-top: 40px;
 }
-.services div+div{
-    margin-left: 20px;
+.services div{
+    padding: 5px;
 }
 
 .cardTitle{
@@ -44,8 +44,8 @@
 }
 .serviceCard::before{
     position: absolute;
-    left: 19px;
-    top: 16px;
+    left: 23px;
+    top: 21px;
 }
 .serviceCard:hover{
     background-color: #c0301c;
@@ -71,10 +71,10 @@
     padding-top: 90px;
 }
 .contactBlock{
-    position: absolute;
+    /* position: absolute;
     bottom: 0;
-    left: 0;
-    background: linear-gradient( rgba(192, 48, 28, 0.7), rgba(192, 48, 28, 0.7) ), url('../../img/action.png');
+    left: 0; */
+    background: linear-gradient( rgba(192, 48, 28, 0.7), rgba(192, 48, 28, 0.7) ), url('../../img/action-compressor.png');
     height: 290px;
     width: 100%;
     background-position: center;
@@ -92,4 +92,37 @@
 .contactBtn{
     composes: welcomeBtn from "../StartPage/StartPage.module.css";
     font-family: 'Roboto Slab', serif;
+}
+
+@media(max-width: 740px){
+    .services{
+        flex-wrap: wrap;
+    }
+    .cardText{
+        padding-bottom: 20px;
+    }
+}
+
+@media(max-width: 600px){
+    .cardTitle{
+        font-size: 12px;
+    }
+    .cardText{
+        font-size: 12px;
+    }
+    .actionText{
+        font-size: 25px;
+    }
+    .contactBtn{
+        font-size: 12px;
+    }
+
+}
+@media(max-width: 375px){
+    .actionText{
+        font-size: 22px;
+    }
+    .contactBtn{
+        font-size: 10px;
+    }
 }

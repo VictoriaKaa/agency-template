@@ -29,8 +29,8 @@
 }
 .about__contact{
     position: absolute;
-    left: 107px;
-    top: 80px;
+    left: 30%;
+    top: 30%;
 }
 .facebook, .twitter, .google, .linkedin{
     filter: blur(100px);
@@ -88,4 +88,33 @@
     font-family: 'Roboto Slab', serif;
     font-size: 14px;
     color: #555555;
+}
+@media(max-width: 850px){
+    .aboutText{
+        flex-wrap: wrap;
+    }
+    .aboutText div + div{
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+}
+@media(max-width: 600px){
+    .aboutText, .position, .name{
+        font-size: 12px;
+    }
+}
+@media(max-width: 580px){
+    .about__contact{
+        left: 40%;
+    }
+}
+@media(max-width: 480px){
+    .about__contact{
+        left: 37%;
+    }
+}
+@media(max-width: 380px){
+    .about__contact{
+        left: 30%;
+    }
 }

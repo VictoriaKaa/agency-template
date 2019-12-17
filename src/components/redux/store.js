@@ -3,7 +3,6 @@ import { combineReducers } from "redux";
 // import thunkMiddleware from "redux-thunk";
 import { reducer as formReducer } from 'redux-form';
 
-import ewr from "../../img/work1.png"
 import aboutReducer from "./about-reducer";
 import galleryReducer from "./gallery-reducer";
 import servicesReducer from "./services-reducer";

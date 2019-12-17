@@ -9,7 +9,6 @@ const WorkPage = (props) => {
     let goWorkPage = () => {
         editNavigate(true);
     }
-    debugger;
     return (
         <div className={styles.galleryBlock}>
             <div className={styles.pageTitle}>Latest Works</div>
@@ -17,13 +16,11 @@ const WorkPage = (props) => {
                 <Fade left duration={1000}>
                     <img src={props.location.state.src} className={styles.work} />
                 </Fade>
-                <div className={styles.itemText}>
-                    <div className={styles.itemInner}>
-                        <Fade right duration={1000}>
-                            <div className={styles.itemTitle}>Name: {props.location.state.title}</div>
-                            <div className={styles.itemMessage}>Description: {props.location.state.message}</div>
-                        </Fade>
-                    </div>
+                <div className={styles.itemInner}>
+                    <Fade right duration={1000}>
+                        <div className={styles.itemTitle}>Name: {props.location.state.title}</div>
+                        <div className={styles.itemMessage}>Description: {props.location.state.message}</div>
+                    </Fade>
                 </div>
             </div >
             <div className={styles.btnBLock}>

@@ -17,7 +17,7 @@ const App = (props) => {
   
   return (
     <Provider store={store}>
-      <HashRouter>  {/* hashrouter используется для github pages */}
+      <HashRouter basename={process.env.PUBLIC_URL}>  {/* hashrouter используется для github pages */}
         <div className='app-wrapper'>
           <Navbar />
           <div className='app-wrapper-content'>

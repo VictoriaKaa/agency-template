@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "react": "^16.11.0",
+    "react-burger-menu": "^2.6.13",
     "react-dom": "^16.11.0",
     "react-gesture-gallery": "^1.1.0",
     "react-gesture-responder": "^2.1.0",
