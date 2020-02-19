@@ -14,12 +14,7 @@
 }
 
 @media(max-width: 600px){
-    .item a{
-        font-size: 14px;
-    }
-}
-@media(max-width: 320px){
-    .item a{
-        font-size: 10px;
+    .item{
+        padding: 20px;
     }
 }

@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from './Gallery.module.css'
-import Work from './Work/Work';
 import Fade from 'react-reveal/Fade';
+import Work from './Work/Work';
+import styles from './Gallery.module.css'
 
 const Gallery = (props) => {
-    let worksElements = props.galleryData.map(p => <Work id={p.id} src={p.src} title={p.title} message={p.message} />)
+    let worksElements = props.galleryData.map(p => <Work id={p.id} src={p.src} title={p.title} message={p.message} key={p.id} />)
 
     return (
         <>

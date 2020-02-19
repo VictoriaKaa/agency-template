@@ -27,7 +27,7 @@
     width: 200px;
     height: 200px;
 }
-.about__contact{
+.aboutContact{
     position: absolute;
     left: 30%;
     top: 30%;
@@ -104,17 +104,17 @@
     }
 }
 @media(max-width: 580px){
-    .about__contact{
+    .aboutContact{
         left: 40%;
     }
 }
 @media(max-width: 480px){
-    .about__contact{
+    .aboutContact{
         left: 37%;
     }
 }
 @media(max-width: 380px){
-    .about__contact{
+    .aboutContact{
         left: 30%;
     }
 }

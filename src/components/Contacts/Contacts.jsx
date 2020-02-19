@@ -12,7 +12,7 @@ let maxLength30 = maxLengthCreator(30);
 const Contacts = (props) => {
 
   let sendMessage = () => {
-    console.log("123");
+    console.log("send message doesn't work");
   }
   return (
     <Fade duration={1000}>
@@ -39,7 +39,6 @@ const Contacts = (props) => {
                 shapedtheme@gmail.com<br />
                 khalilkode@gmail.com</div>
             </div>
-
           </div>
           <AddMessageFormRedux onSubmit={sendMessage} />
         </div>
@@ -79,7 +78,6 @@ const AddMessageForm = (props) => {
 }
 
 const AddMessageFormRedux = reduxForm({ form: "addMessageForm" })(AddMessageForm);
-
 
 
 export default Contacts;

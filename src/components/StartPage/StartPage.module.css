@@ -1,8 +1,6 @@
 
 .welcomeBlock{
     background: linear-gradient( rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ), url('../../img/home-background-compressor.png'); 
-    /* height: 100vh;
-    width: 100vw; */
     height: 530px;
     background-position: center;
     background-size: cover;

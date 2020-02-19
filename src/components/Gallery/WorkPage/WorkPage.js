@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import styles from './WorkPage.module.css';
 import { Redirect } from 'react-router-dom';
-import Pulse from 'react-reveal/Pulse';
 import Fade from 'react-reveal/Fade';
+import styles from './WorkPage.module.css';
 
 const WorkPage = (props) => {
     let [navigate, editNavigate] = useState(false);

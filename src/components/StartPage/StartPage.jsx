@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
-import styles from './StartPage.module.css';
 import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
+import styles from './StartPage.module.css';
 
 const StartPage = (props) => {
     let [navigate, editNavigate] = useState(false);

@@ -1,26 +1,22 @@
 
-// использует dal уровень -  не нужно здесь
+let nextId = 1;
 
-// action Название
-let FOLLOW = 'FOLLOW';
-
-// инициализация стейта
 let initialState = {
     servicesData: [
         {
-            id: 1,
+            id: nextId++,
             title: "CLEAN TYPOGRAPHY",
             text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. Lorem ipsum.",
             content: "typography"
         },
         {
-            id: 2,
+            id: nextId++,
             title: "ROCK SOLID CODE",
             text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. Lorem ipsum.",
             content: "code"
         },
         {
-            id: 3,
+            id: nextId++,
             title: "EXPERT SUPPORT",
             text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. Lorem ipsum.",
             content: "support"
@@ -28,20 +24,12 @@ let initialState = {
     ]
 }
 
-// reducer - применяет action к state
 const servicesReducer = (state = initialState, action) => {
     switch (action.type) {
-        case FOLLOW:
-            return {
-                ...state
-            }
         default:
             return state;
     }
 }
-
-//action creators
-// export const followSuccess = (userId) => ({ type: FOLLOW, userId }) // action creators
 
 
 export default servicesReducer;

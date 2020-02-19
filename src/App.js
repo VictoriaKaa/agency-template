@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, HashRouter } from "react-router-dom";
-import store from './components/redux/store';
 import { Provider } from "react-redux";
+import store from './components/redux/store';
 import Navbar from './components/Navbar/Navbar';
 import ArticlesContainer from './components/Articles/ArticlesContainer';
 import AboutContainer from './components/About/AboutContainer';

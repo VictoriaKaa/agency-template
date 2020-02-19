@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
-import styles from './Services.module.css';
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
+import styles from './Services.module.css';
 
 const Services = (props) => {
     let [navigate, editNavigate] = useState(false);
     let getInTouch = () => {
         editNavigate(true);
     }
-    let className = styles[props.servicesData[0].content];
     let servicesElements = props.servicesData.map(p =>
-        <div>
+        <div key={p.id}>
             <div className={styles[p.content]}></div>
             <div className={styles.cardTitle}>{p.title}</div>
             <div className={styles.cardText}>{p.text}</div>

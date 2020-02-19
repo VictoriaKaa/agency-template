@@ -4,31 +4,6 @@
 .galleryBlock{
     composes: articlesBlock from "../Articles/Articles.module.css";
 }
-/* .gallery{
-    display: grid;
-    grid-template-areas:
-        "photo1 photo2 photo3"
-        "photo4 photo5 photo6"
-        "photo7 photo8 photo9";
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
-    max-width: 1123px;
-    margin: 10px auto;
-}
-
-@media(max-width: 1122px){
-    .gallery{
-        display: grid;
-        grid-template-areas:
-            "photo1 photo2"
-            "photo3 photo4"
-            "photo5 photo6"
-            "photo7 photo8"
-            " photo9";
-            grid-auto-flow: row;
-    }
-} */
 .gallery{
     display: flex;
     flex-wrap: wrap;

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Articles.module.css'
-import { reset, Field, reduxForm } from 'redux-form';
+import { Field, reduxForm } from 'redux-form';
 import Article from './Article/Article';
 import { Textarea } from '../common/FormsControls/FormsControls';
 import { required, maxLengthCreator } from '../utils/validator/validators';
@@ -21,15 +21,9 @@ class Articles extends React.Component {
         let month = date.toLocaleString('default', { month: 'short' });
         this.props.addArticle(values.newArticle, values.newTitle, this.state.imagePreviewUrl, day, month);
     };
-    // reset = () => {
-    //     console.log("clear");
-    //     this.setState({ file: '', imagePreviewUrl: '' });
-    //     this.props.resetForm();
-    // }
 
     _handleImageChange(e) {
         e.preventDefault();
-        debugger;
         let reader = new FileReader();
         let file = e.target.files[0];
         reader.onloadend = () => {
@@ -43,7 +37,6 @@ class Articles extends React.Component {
     }
     deleteFile(e) {
         e.preventDefault();
-        debugger;
         this.setState({
             file: '',
             imagePreviewUrl: '',
@@ -53,19 +46,15 @@ class Articles extends React.Component {
 
     render() {
         let articlesElements = this.props.articleData.map(p =>
-            <Article title={p.title} text={p.text} image={p.image} day={p.day} month={p.month} />);
+            <Article title={p.title} text={p.text} image={p.image} day={p.day} month={p.month} key={p.id} />);
         let { imagePreviewUrl } = this.state;
         let imagePreview = null;
         if (imagePreviewUrl) {
             imagePreview = (<img src={imagePreviewUrl} className={styles.newImage} />)
         }
-        // else {
-        //     imagePreview = (<div className={styles.previewText}>Please select an Image for Article</div>);
-        // }
 
         return (
             <div className={styles.articlesBlock}>
-
                 <Fade duration={700}>
                     <div className={styles.pageTitle}>Recent Articles</div>
                 </Fade>
@@ -77,11 +66,12 @@ class Articles extends React.Component {
                 <div className={styles.previewComponent}>
                     <div className={styles.fileLoader}>
                         <form onSubmit={(e) => this._handleSubmit(e)} className={styles.fileBlock}>
-                            <input className={styles.fileInput} type="file" id="fileForArticle"
+                            <input id="fileForArticle" className={styles.fileInput} type="file"
                                 onChange={(e) => this._handleImageChange(e)} />
-                            <label for="fileForArticle">Upload file</label>
+                            <label htmlFor="fileForArticle">Upload file</label>
                         </form>
-                        <button onClick={(e) => this.deleteFile(e)} className={styles.btnClearFile} disabled={this.state.disabled} >Clear file</button>
+                        <button onClick={(e) => this.deleteFile(e)}
+                        className={styles.btnClearFile} disabled={this.state.disabled} >Clear file</button>
                     </div>
                     <div className={styles.imgPreview}>
                         {imagePreview}
@@ -93,11 +83,10 @@ class Articles extends React.Component {
     }
 }
 
-
 const AddArticleForm = (props) => {
     const { handleSubmit, reset, pristine, submitting } = props
     return (
-        <form onSubmit={props.handleSubmit}>
+        <form onSubmit={handleSubmit}>
             <div>
                 <div>
                     <Field component={Textarea} name="newTitle" placeholder="Enter title"
@@ -108,19 +97,16 @@ const AddArticleForm = (props) => {
                         validate={[required, maxLength300]} className={styles.textField} />
                 </div>
                 <div>
-                    <button className={styles.add__btn} >Add post</button>
-                    <button className={styles.add__btn} disabled={pristine || submitting} onClick={props.reset} >Clear text</button>
+                    <button className={styles.addBtn} >Add post</button>
+                    <button className={styles.addBtn} disabled={pristine || submitting} onClick={reset} >Clear text</button>
                 </div>
             </div>
         </form>
     )
 }
-// const afterSubmit = (result, dispatch) =>
-// dispatch(reset("addArticleForm"));
 
 const AddArticleFormRedux = reduxForm({
-    form: "addArticleForm",
-    // onSubmitSuccess: afterSubmit
+    form: "addArticleForm"
 })(AddArticleForm);
 
 

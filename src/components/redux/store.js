@@ -1,6 +1,5 @@
-import {createStore, applyMiddleware, compose} from "redux"
+import { createStore } from "redux"
 import { combineReducers } from "redux";
-// import thunkMiddleware from "redux-thunk";
 import { reducer as formReducer } from 'redux-form';
 
 import aboutReducer from "./about-reducer";
@@ -16,13 +15,8 @@ let reducers = combineReducers({
     servicesPage: servicesReducer,
     articlesPage: articlesReducer,
     contactsPage: contactsReducer
-}); // можно записывать без повторов
-// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-// const store = createStore(reducers, composeEnhancers(
-//     applyMiddleware(thunkMiddleware)
-//   ));
+}); 
 let store = createStore(reducers);
 
-window.__store__ = store;
 
 export default store;

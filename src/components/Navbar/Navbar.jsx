@@ -1,10 +1,10 @@
 import React, { useRef, useContext } from 'react';
-import styles from './Navbar.module.css';
 import { NavLink } from "react-router-dom";
 import useOnClickOutside from '../utils/hooks/onClickOutside';
 import { MenuContext } from '../common/MenuBar/NavState/NavState';
 import NavState from '../common/MenuBar/NavState/NavState';
 import MainMenu from '../common/MenuBar/MainMenu/MainMenu';
+import styles from './Navbar.module.css';
 
 
 const Navbar = (props) => {
@@ -12,9 +12,13 @@ const Navbar = (props) => {
   const { isMenuOpen, toggleMenuMode } = useContext(MenuContext);
 
   const menu = (
-    <><div className={styles.item}>
-      <NavLink to='/services' activeClassName={styles.active}>Services</NavLink>
-    </div>
+    <>
+      <div className={styles.item}>
+        <NavLink exact to='/' activeClassName={styles.active}>Start page</NavLink>
+      </div>
+      <div className={styles.item}>
+        <NavLink to='/services' activeClassName={styles.active}>Services</NavLink>
+      </div>
       <div className={styles.item}>
         <NavLink exact to='/gallery' activeClassName={styles.active}>Gallery</NavLink>
       </div>

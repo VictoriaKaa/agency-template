@@ -5,9 +5,9 @@ import post1 from '../../../img/post1-compressor.png';
 const Article = (props) => {
     let image = null;
     if (props.image) {
-        image = (<img src={props.image} />)
+        image = <img src={props.image} />
     } else {
-        image = (<img src={post1} />);
+        image = <img src={post1} />;
     }
     return (
         <div className={styles.item}>

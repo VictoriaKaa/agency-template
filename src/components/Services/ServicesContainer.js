@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Servicess from './Services.jsx';
+import Services from './Services.jsx';
 
 
 class ServicesContainer extends React.Component {
     render() {
         return (
             <div>
-                <Servicess servicesData={this.props.servicesData} />
+                <Services servicesData={this.props.servicesData} />
             </div>
         );
     }

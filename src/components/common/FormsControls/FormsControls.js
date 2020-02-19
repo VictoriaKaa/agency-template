@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './FormControls.module.css';
-import { Field } from 'redux-form';
 
 const FormControl = ({ input, meta: {touched, error}, children }) => {
     const hasError = touched && error;
@@ -12,7 +11,6 @@ const FormControl = ({ input, meta: {touched, error}, children }) => {
             {hasError && <span>{error}</span>}
         </div>
     )
-
 }
 
 export const Textarea = (props) => {

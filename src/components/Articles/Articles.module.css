@@ -27,7 +27,7 @@
     margin-top: 30px;
 }
 
-.add__btn, input[type="file"] + label, .btnClearFile {
+.addBtn, input[type="file"] + label, .btnClearFile {
     width: 170px;
     height: 45px;
     border: 1px solid black;
@@ -39,14 +39,14 @@
     font-size: 12px;
     cursor: pointer;
 }
-.add__btn:disabled, .add__btn:disabled:hover,
+.addBtn:disabled, .addBtn:disabled:hover,
 .btnClearFile:disabled, .btnClearFile:disabled:hover{
     color: white;
     border-color: #555555;
     background-color: #555555;
     cursor: default;
 }
-.add__btn:hover{
+.addBtn:hover{
     background-color: #c0301c;
     color: white;
     border: 1px solid #c0301c;
@@ -136,7 +136,7 @@ input[type="file"] + label:hover,.btnClearFile:hover{
     button + button{
         margin-left: 0px;
     }
-    .add__btn{
+    .addBtn{
         margin-right: 100px;
         margin-bottom: 10px;
     }

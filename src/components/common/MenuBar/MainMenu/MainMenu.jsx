@@ -1,23 +1,25 @@
 import React, { useRef, useContext } from 'react';
-import styles from './MainMenu.module.css';
-import { NavLink } from "react-router-dom";
+import Fade from 'react-reveal/Fade';
 import useOnClickOutside from "../../../utils/hooks/onClickOutside.js";
 import { MenuContext } from '../NavState/NavState';
 import HamburgerButton from '../HamburgerButton/HamburgerButton.jsx';
+import styles from './MainMenu.module.css';
 
 
 const SideMenu = ({ children }) => {
   const { isMenuOpen } = useContext(MenuContext);
 
-  return <div className={!isMenuOpen ? styles.hiddenSidebar : styles.activeSidebar}>
-    {children}
-  </div>
+  return <Fade right>
+    <div className={!isMenuOpen ? styles.hiddenSidebar : styles.activeSidebar}>
+      {children}
+    </div>
+  </Fade>
 };
 
 SideMenu.defaultProps = {
   children: (
     <div className={styles.sidebar}>
-      <a href="#">Home</a>
+      <div>Not navigation</div>
     </div>
   ),
 };
@@ -30,7 +32,7 @@ const MainMenu = ({ children }) => {
       toggleMenuMode();
     }
   });
-  
+
   return (
     <nav className={styles.nav} ref={node} >
       <HamburgerButton />

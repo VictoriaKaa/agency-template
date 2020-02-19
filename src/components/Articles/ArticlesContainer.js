@@ -3,23 +3,9 @@ import { connect } from 'react-redux';
 import Articles from './Articles';
 import {addArticle} from '../redux/articles-reducer';
 
-
-
-// class ArticlesContainer extends React.Component {
-//     render() {
-//         return (
-//             <div>
-//                 <Articles articleData={this.props.articleData} />
-//             </div>
-//         );
-//     }
-// }
-
 let mapStatetoProps = (state) => ({
     articleData: state.articlesPage.articleData
 })
-
-
 
 let mapDispatchToProps = (dispatch) => {
     return {
